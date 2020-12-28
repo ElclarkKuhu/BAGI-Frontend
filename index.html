@@ -6,6 +6,16 @@
     
     <title>BAGI</title>
 
+    <script>
+      const hash = window.location.hash.substring(1);
+
+      if (hash == "") {
+          window.location.replace("/login")
+      } else {
+          getUID(hash)
+      }
+    </script>
+
     <link rel="shortcut icon" href="/src/img/favicon/favicon.ico" type="image/x-icon">
 
     <link rel="icon" type="image/png" sizes="16x16" href="/src/img/favicon/favicon-16x16.png">
@@ -20,10 +30,6 @@
     <link rel="manifest" href="/src/img/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="/src/css/elclark.css">
-
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-    <script src="/src/js/app.js"></script>
   </head>
   <body>
     <div class="center-container">
@@ -41,6 +47,11 @@
         <span style="font-size: small; color: #ca0000;">&#169;2020 Elclark.</span>
       </div>
     </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="/src/js/app.js"></script>
+
     <script src="/src/js/index.js"></script>
   </body>
 </html>

@@ -1,12 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const hash = window.location.hash.substring(1);
-
-    if (hash == "") {
-        window.location.replace("/dashboard")
-    } else {
-        getUID(hash)
-    }
-
 });
 
 function getUID(hash) {
